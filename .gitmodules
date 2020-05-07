@@ -1,3 +1,18 @@
 [submodule "targets/django-filter"]
 	path = targets/django-filter
 	url = https://github.com/carltongibson/django-filter
+[submodule "targets/django-guardian"]
+	path = targets/django-guardian
+	url = https://github.com/django-guardian/django-guardian
+[submodule "targets/django-sql-explorer"]
+	path = targets/django-sql-explorer
+	url = https://github.com/groveco/django-sql-explorer
+[submodule "targets/django-tables2"]
+	path = targets/django-tables2
+	url = https://github.com/jieter/django-tables2
+[submodule "targets/django-grappelli"]
+	path = targets/django-grappelli
+	url = https://github.com/sehmaschine/django-grappelli
+[submodule "targets/django-hijack"]
+	path = targets/django-hijack
+	url = https://github.com/arteria/django-hijack
