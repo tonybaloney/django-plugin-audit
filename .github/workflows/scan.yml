@@ -27,6 +27,7 @@ jobs:
       with:
         path: targets/django-filter
     - uses: actions/upload-artifact@v2
+      name: django-filter-results
       with:
         name: django-filter-results
         path: out/
