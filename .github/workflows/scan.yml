@@ -36,7 +36,7 @@ jobs:
       uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-filter
-        source: django_filter
+        source: django_filters
     - uses: actions/upload-artifact@v2
       name: django-filter-results
       with:
@@ -45,10 +45,10 @@ jobs:
     - name: clean-django-filter-results
       run: rm -rf out/
 
-    - name: django-grapelli
+    - name: django-grappelli
       uses: tonybaloney/pycharm-security@1.17.0
       with:
-        path: targets/django-grapelli
+        path: targets/django-grappelli
     - name: django-guardian
       uses: tonybaloney/pycharm-security@1.17.0
       with:
