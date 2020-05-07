@@ -21,6 +21,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: recursive
+
+    - name: setup-django-filter
+      run: python3 -m venv venv/
+      working-directory: targets/django-filter
     - name: django-filter
       id: django-filter-scan
       uses: tonybaloney/pycharm-security@master
