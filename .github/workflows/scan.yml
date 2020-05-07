@@ -16,6 +16,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.6]
+        project: [django-filter, django-grappelli, django-guardian, django-hijack, django-sql-explorer, django-tables2]
     steps:
     - uses: actions/checkout@v2
       with:
@@ -25,43 +26,21 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: setup-django-filter
+    - name: setup-project
       run: |
         python -m venv venv/
         source venv/bin/activate
         python setup.py develop
-      working-directory: targets/django-filter
-    - name: django-filter
-      id: django-filter-scan
+      working-directory: targets/${{ matrix.project }}
+    - name: scan
       uses: tonybaloney/pycharm-security@1.17.0
       with:
-        path: targets/django-filter
-        source: django_filters
+        path: targets/${{ matrix.project }}
+        source: .
     - uses: actions/upload-artifact@v2
-      name: django-filter-results
+      name: results
       with:
-        name: django-filter-results
+        name: ${{ matrix.project }}-results
         path: out/
-    - name: clean-django-filter-results
+    - name: clean-results
       run: rm -rf out/
-
-    - name: django-grappelli
-      uses: tonybaloney/pycharm-security@1.17.0
-      with:
-        path: targets/django-grappelli
-    - name: django-guardian
-      uses: tonybaloney/pycharm-security@1.17.0
-      with:
-        path: targets/django-guardian
-    - name: django-hijack
-      uses: tonybaloney/pycharm-security@1.17.0
-      with:
-        path: targets/django-hijack
-    - name: django-sql-explorer
-      uses: tonybaloney/pycharm-security@1.17.0
-      with:
-        path: targets/django-sql-explorer
-    - name: django-tables2
-      uses: tonybaloney/pycharm-security@1.17.0
-      with:
-        path: targets/django-tables2
