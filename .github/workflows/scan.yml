@@ -22,26 +22,26 @@ jobs:
       with:
         submodules: recursive
     - name: django-filter
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-filter
     - name: django-grapelli
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-grapelli
     - name: django-guardian
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-guardian
     - name: django-hijack
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-hijack
     - name: django-sql-explorer
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-sql-explorer
     - name: django-tables2
-      uses: tonybaloney/pycharm-security@1.16.0
+      uses: tonybaloney/pycharm-security@master
       with:
         path: targets/django-tables2
