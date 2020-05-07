@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: django-filter-results
-        path: {{steps.django-filter.outputs.result}}
+        path: ${{steps.django-filter.outputs.result}}
     - name: django-grapelli
       uses: tonybaloney/pycharm-security@master
       with:
