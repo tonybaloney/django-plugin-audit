@@ -33,31 +33,35 @@ jobs:
       working-directory: targets/django-filter
     - name: django-filter
       id: django-filter-scan
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-filter
+        source: django_filter
     - uses: actions/upload-artifact@v2
       name: django-filter-results
       with:
         name: django-filter-results
         path: out/
+    - name: clean-django-filter-results
+        run: rm -rf out/
+
     - name: django-grapelli
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-grapelli
     - name: django-guardian
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-guardian
     - name: django-hijack
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-hijack
     - name: django-sql-explorer
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-sql-explorer
     - name: django-tables2
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.17.0
       with:
         path: targets/django-tables2
