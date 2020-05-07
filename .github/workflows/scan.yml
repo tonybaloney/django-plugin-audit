@@ -27,10 +27,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: setup-project
-      run: |
-        python -m venv venv/
-        source venv/bin/activate
-        python setup.py develop
+      run: python setup.py develop
       working-directory: targets/${{ matrix.project }}
     - name: scan
       uses: tonybaloney/pycharm-security@1.17.0
@@ -42,5 +39,3 @@ jobs:
       with:
         name: ${{ matrix.project }}-results
         path: out/
-    - name: clean-results
-      run: rm -rf out/
