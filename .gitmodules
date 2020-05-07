@@ -1,0 +1,3 @@
+[submodule "targets/django-filter"]
+	path = targets/django-filter
+	url = https://github.com/carltongibson/django-filter
