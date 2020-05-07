@@ -43,7 +43,7 @@ jobs:
         name: django-filter-results
         path: out/
     - name: clean-django-filter-results
-        run: rm -rf out/
+      run: rm -rf out/
 
     - name: django-grapelli
       uses: tonybaloney/pycharm-security@1.17.0
