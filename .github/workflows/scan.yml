@@ -19,7 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2'
-      submodules: recursive
+      with:
+        submodules: recursive
     - name: PyCharm Python Security Scanner
       uses: tonybaloney/pycharm-security@1.16.0
       with:
