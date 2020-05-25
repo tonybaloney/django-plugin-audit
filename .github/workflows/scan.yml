@@ -30,10 +30,11 @@ jobs:
       run: python setup.py develop
       working-directory: targets/${{ matrix.project }}
     - name: scan
-      uses: tonybaloney/pycharm-security@master
+      uses: tonybaloney/pycharm-security@1.19.0
       with:
-        path: targets/${{ matrix.project }}
-        source: .
+        path: .
+        source: targets/${{ matrix.project }}
+        requirements: targets/${{ matrix.project }}/requirements.txt
     - uses: actions/upload-artifact@v2
       name: results
       with:
