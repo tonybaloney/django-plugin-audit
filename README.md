@@ -2,7 +2,7 @@
 
 A static code analysis tool for Django plugins
 
-## Adding a project
+## Adding a project 
 
 1. Create a git submodule in `targets`
 2. Add the project name to the GitHub actions matrix
