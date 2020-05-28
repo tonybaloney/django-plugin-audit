@@ -30,7 +30,7 @@ jobs:
       run: python setup.py develop
       working-directory: targets/${{ matrix.project }}
     - name: scan
-      uses: tonybaloney/pycharm-security@testing-actions
+      uses: tonybaloney/pycharm-security@dev-actions
       with:
         path: .
         source: targets/${{ matrix.project }}
